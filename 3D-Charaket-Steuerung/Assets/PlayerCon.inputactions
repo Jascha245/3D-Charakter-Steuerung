@@ -17,7 +17,7 @@
                 {
                     "name": "Look",
                     "type": "Value",
-                    "id": "bd58159e-d14c-41dd-8670-0aa4fd3e47b8",
+                    "id": "50ff7d18-f513-4e02-95eb-a5788a61b455",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -93,7 +93,7 @@
                 },
                 {
                     "name": "",
-                    "id": "26fcceeb-95d4-45b2-a435-1b85d19487c2",
+                    "id": "99873423-51ae-4ee7-bd27-dfa378b5b833",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",

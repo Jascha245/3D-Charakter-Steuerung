@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float runSpeed;
-    [SerializeField]
-    private Vector3 runDirection;
+    [SerializeField] public Transform orientation;
+    public Vector3 runDirection;
     private Rigidbody rbody;
     void Awake()
     {
@@ -16,13 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public void Walking(InputAction.CallbackContext context)
     {
         runDirection = context.ReadValue<Vector3>();
-        if (context.performed)
-        {
-            rbody.velocity = runDirection * runSpeed;
-        }
+        runDirection = Quaternion.Euler(0, orientation.eulerAngles.y, 0) * runDirection;
+        rbody.velocity = runDirection * runSpeed;
+        
+
     }
     // Update 1is called once per frame
     void Update()
     {
+
     }
 }
