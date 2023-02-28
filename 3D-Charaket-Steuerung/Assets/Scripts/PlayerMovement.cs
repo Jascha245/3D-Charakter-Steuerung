@@ -17,13 +17,10 @@ public class PlayerMovement : MonoBehaviour
     {
         runDirection = context.ReadValue<Vector3>();
         runDirection = Quaternion.Euler(0, orientation.eulerAngles.y, 0) * runDirection;
-        rbody.velocity = runDirection * runSpeed;
-        
-
     }
     // Update 1is called once per frame
     void Update()
     {
-
+        rbody.velocity = runDirection * runSpeed;
     }
 }
