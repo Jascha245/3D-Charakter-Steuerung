@@ -12,11 +12,15 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rbody = GetComponent<Rigidbody>();
+        
     }
     public void Walking(InputAction.CallbackContext context)
     {
         runDirection = context.ReadValue<Vector3>();
+        if (context.performed)
+        {
         runDirection = Quaternion.Euler(0, orientation.eulerAngles.y, 0) * runDirection;
+        }
     }
     // Update 1is called once per frame
     void Update()

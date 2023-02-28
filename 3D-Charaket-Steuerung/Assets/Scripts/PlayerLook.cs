@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +5,7 @@ public class PlayerLook : MonoBehaviour
 {
     [SerializeField] private float sensitivity;
     [SerializeField] private float lookAcceleration;
+    [SerializeField] private Transform transform;
 
     private Vector3 angle;
     private Vector3 lerpAngle;
